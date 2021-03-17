@@ -1,0 +1,22 @@
+server:
+  port: 8080
+Spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myshool
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.example.jdbc.entity'
+
+
+mybatis-plus:
+  type-aliases-package: com.jbit.demo.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
+
